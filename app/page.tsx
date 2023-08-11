@@ -27,13 +27,9 @@ export default function Home() {
         </div>
 
         <div className="m-5 self-center">
-          <Typewriter
-              options={{
-                strings: ['work in progress...'],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            <Typewriter onInit={t => {
+              t.typeString("work in progres...").start()
+            }}/>
         </div>
     </main>
   )
