@@ -1,7 +1,9 @@
+'use client'
 import Image from 'next/image'
 import oldguy from "@/public/oldguy.webp"
 import fire from "@/public/fire.png"
 import coffee from "@/public/coffee.webp"
+import Typewriter from "typewriter-effect"
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col justify-between text-green-500">
@@ -22,13 +24,16 @@ export default function Home() {
           <div className='flex flex-row justify-center my-5'>
             <Image  src={coffee} height={50} alt="asdf"/>
           </div>
-          <div>
-
-          </div>
         </div>
 
         <div className="m-5 self-center">
-          work in progres...
+          <Typewriter
+              options={{
+                strings: ['work in progress...'],
+                autoStart: true,
+                loop: true,
+              }}
+            />
         </div>
     </main>
   )
